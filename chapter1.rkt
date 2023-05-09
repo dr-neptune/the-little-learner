@@ -9,10 +9,11 @@
           #:title "An R × R → R function"
           #:x-label "x" #:y-label "y" #:z-label "cos(x) sin(y)")
 
+(define rho ρ)
 
 (define (line x)
   (λ (w b)
-    (+ (* w x) b)))
+    (+ (rho (* w x)) b)))
 
 ;; plot the line y = 0.5x + 10
 (plot (function (λ (w) ((line w) 0.5 10)))
